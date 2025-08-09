@@ -1,0 +1,624 @@
+
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Noto sans', sans-serif;
+}
+html{
+  scroll-behavior: smooth;
+}
+body{
+  background: rgb(9, 11, 24);
+}
+#app{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background: url('./assest/landingPIc.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat:no-repeat ;
+}
+#app > .NavContain {
+  position: absolute;
+  top: 3.5em; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  display: grid;
+  grid-template-columns: 150px 1fr 150px;
+  width: 800px;
+  height: 50px;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 100px;
+  z-index: 5;
+  border: 1px solid rgba(30, 19, 57, 0.8);
+  background: rgba(10, 13, 31, 0.8);
+}
+
+
+#app > .NavContain .SiteLogo{
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+#app > .NavContain .SiteLogo img{
+  height: 75%;
+  width: 75%;
+  object-fit: contain;
+  object-position: center;
+}
+#app > .NavContain ul{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#app > .NavContain ul li{
+  list-style: none;
+  color: white;
+  font-weight: 400;
+  font-size: 15px;
+  cursor: pointer;
+}
+#app > .NavContain ul li:hover{
+  color: #6673CC;
+}
+#app > .NavContain > .launchbud{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+#app > .NavContain > .launchbud button{
+  color: white;
+  text-align: center;
+  border-radius: 100px;
+  background: rgba(28, 35, 84, 1);
+  border: 1px solid;
+  padding: .6em;
+  cursor: pointer;
+  box-shadow: 0px 2px 5px 0px rgba(0, 2, 15, 0.2);
+  border-image-slice: 1;
+  background-blend-mode: lighten; 
+  border-image-source: radial-gradient(16.22% 57.22% at 30.73% 25%, #6673C4 0%, rgba(38, 48, 115, 0) 125%);
+}
+#app > .HomePageWriteUp{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content:center;
+  align-items: start;
+  flex-direction: column;
+  padding-left: 5em;
+}
+#app > .HomePageWriteUp > article{
+  color: white;
+  font-size: 52px;
+  font-weight: 600;
+  line-height: 120%;
+}
+#app > .HomePageWriteUp > small{
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+  color: white;
+}
+#app > .HomePageWriteUp > .Launch_Share{
+  margin-top: 2em;
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+#app > .HomePageWriteUp > .Launch_Share > button{
+  padding: 12px 40px; 
+  font-size: 16px;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+}
+#app > .HomePageWriteUp > .Launch_Share :nth-child(1){
+  background-color: white;
+}
+#app > .HomePageWriteUp > .Launch_Share :nth-child(2){
+  background: #FFFFFF38;
+  color: white;
+}
+#Features{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2em 0;
+  padding-top: 2em;
+  backdrop-filter: blur(457.29998779296875px)
+}
+#Features h2{
+  font-size: 48px;
+  font-weight: 600;
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+#Features .featuresContent {
+  display: grid;
+  grid-template-columns: repeat(3, auto); 
+  gap: 3em;
+}
+
+#Features .featuresContent > div{
+  width: 300px;
+  height: 200px;
+  display: flex;
+  border-radius: 10px;
+  background: #24242473;
+  border-top: 1px solid rgba(255, 255, 255, 0.64);
+  border-left: 1px solid rgba(255, 255, 255, 0.096);
+  border-right: 1px solid rgba(255, 255, 255, 0.096);
+  position: relative;
+  border-image-slice: 1;
+  background-blend-mode: lighten;
+  background-clip: padding-box;
+  align-items: center;
+}
+.autopilotfloater{
+  position: absolute;
+  top: -1.7em;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #501BE5;
+  box-shadow: 0px 10px 10px 0 #5024c9af;
+}
+.autopilotfloater > img{
+  width: 70%;
+  height: 70%;
+  object-fit: cover;
+}
+.wallet{
+  position: absolute;
+  top: -1.7em;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(229, 145, 27, 1);
+  box-shadow: 0px 10px 12px 0px rgb(229 145 27 / 33%);
+}
+.wallet > img{
+  width: 70%;
+  height: 70%;
+  object-fit: cover;
+}
+.wronggame{
+  position: absolute;
+  top: -1.7em;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(27, 122, 229, 1);
+  box-shadow:0px 10px 10px 0 rgb(27 122 229 / 49%);
+}
+.wronggame > img{
+  width: 70%;
+  height: 70%;
+  object-fit: cover;
+}
+#Features .featuresContent > div .writeUps{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  flex-direction: column;
+  padding: 0 2em;
+  color: white ;
+  text-align: center;
+}
+#Features .featuresContent > div .writeUps h3{
+  font-size: 17px;
+}
+#Features .featuresContent > div .writeUps p{
+  font-size: 13px;
+  color: rgba(124, 134, 151, 1);
+}
+#Features .trade_with_ease{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top:  6em;
+}
+#Features .trade_with_ease > .imgTag{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#Features .trade_with_ease > .imgTag img{
+  width:100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+#Features .trade_with_ease > .writedown{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 5em;
+  flex-direction: column;
+  gap: 3em;
+}
+#Features .trade_with_ease > .writedown h2{
+  text-align: right;
+  font-size: 48px;
+}
+#Features .trade_with_ease > .writedown article{
+  text-align: right;
+  color: rgba(124, 134, 151, 1);
+}
+#Features .trade_with_ease > .writedown > div{
+  text-align: center;
+  width: 100%;
+  align-items: end;
+  display: flex;
+  justify-content: end;
+}
+#Features .trade_with_ease > .writedown > div button{
+  border-radius:100px;
+  background-color: white;
+  text-align: center;
+  font-size: 16px;
+  padding: 12px 40px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+#How_It_Works{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 8em;
+}
+#How_It_Works h2{
+  font-size: 40px;
+  font-weight: 600;
+  color: white;
+  width: 100%;
+  text-align: center;
+  margin-bottom:2em;
+}
+#How_It_Works .samplesContainer{
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 3em;
+}
+#How_It_Works .samplesContainer > div{
+  width: 300px;
+  height: 135px;
+  display: flex;
+  border-radius: 10px;
+  background: #24242473;
+  border-top: 1px solid rgba(255, 255, 255, 0.64);
+  border-left: 1px solid rgba(255, 255, 255, 0.096);
+  border-right: 1px solid rgba(255, 255, 255, 0.096);
+  position: relative;
+  border-image-slice: 1;
+  background-blend-mode: lighten;
+  background-clip: padding-box;
+  align-items: center;
+}
+
+#How_It_Works .samplesContainer > div > div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  flex-direction: column;
+  padding: 0 2em;
+  color: white;
+  text-align: center;
+}
+#How_It_Works .samplesContainer > div > div h3{
+  font-size: 17px;
+}
+#How_It_Works .samplesContainer > div > div p{
+  font-size: 13px;
+  color: rgba(124, 134, 151, 1);
+}
+
+
+#Pricing{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  margin-top: 7em;
+}
+#Pricing h2{
+  color: white;
+  font-size: 48px;
+  margin-bottom:1.5em;
+}
+#Pricing > div{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+#Pricing > div > .PlansSwitch{
+  width: 100%;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  padding-right: 2em;
+}
+#Pricing > div .PlansSwitch button{
+  border: none;
+  cursor: pointer;
+  border-radius: 100px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+#Pricing > div .PlansSwitch button:nth-child(1){
+  background-color: white;
+  color: black;
+  padding: 12px 16px;
+  padding-right: 10em;
+}
+#Pricing > div .PlansSwitch button:nth-child(2){
+  color: white;
+  background: rgba(80, 27, 229, 1);
+  box-shadow: 0px 5px 7px 0px rgba(82, 67, 194, 0.23);
+  position: absolute;
+  left: 50%;
+  padding: 12px 30px;
+  transform: translateX(-10%);
+}
+.priceTag{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  align-items: center;
+  justify-content: space-evenly;
+  margin:3em 0 ;
+
+} 
+.priceTag > .content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* width: 350px; */
+}
+.priceTag > .content > div{
+  background: rgba(35, 29, 79, 1);
+  width: 320px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 475px;
+  padding: 20px 30px;
+  justify-content: space-between;
+  border-radius: 26px;
+  align-items: center;
+  box-shadow: 0px 42px 34px 0px rgba(82, 67, 194, 0.2958);
+  /* gap: 20px; */
+}
+.priceTag > .content > div > .packagesList{
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  gap: 1em;
+  /* margin-top: 2em; */
+  /* margin-bottom: 4em; */
+}
+.priceTag > .content > div > .packagesList .listMap{
+  display: flex;
+  width: 100%;
+  gap: .7em;
+  align-items: center;
+  color: white;
+}
+.priceTag > .content > div > .packagesList .listMap p{
+  font-size: 15px;
+  font-weight: 500;
+}
+.priceTag > .content > div > button{
+  background: rgba(80, 27, 229, 1);
+  border-radius: 24px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 15px;
+  width: 100%;
+  padding: 1em 0;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+.priceTag > .content > div > .valuePrice{
+  display: flex;
+  align-items: baseline;
+  width: 100%;
+  color: white;
+  font-size: 36px;
+  gap: .5em;
+  font-weight: 700;
+}
+.priceTag > .content > div > .valuePrice small{
+  font-weight: 500;
+  font-size: 17px;
+}
+.priceTag > .content > div > article{
+  color: white;
+  font-size: 28px;
+  width: 100%;
+  font-weight: 500;
+  text-align: left;
+}
+.popular{
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  
+}
+.priceTag > .content > div > p{
+  color: white;
+  width: 100%;
+  font-size: 15px;
+  font-weight: 500;
+}
+.popular > button{
+  text-align: center;
+  color: white;
+  background: rgba(64, 56, 121, 1);
+  outline: none;
+  border: none;
+  border-radius: 13px;
+  font-size: 10px;
+  font-weight: 700;
+  padding: .5em 1em;
+}
+#Pricing .twentyFourSevenAcess{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 3em 0;
+}
+#Pricing .twentyFourSevenAcess .pics{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+#Pricing .twentyFourSevenAcess .pics img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+.twentyFourSevenAcess .writedown{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 5em;
+  flex-direction: column;
+  gap: 3em;
+}
+.twentyFourSevenAcess .writedown h2{
+  font-size: 52px !important;
+  font-weight: 600;
+  margin-bottom: 0 !important;
+  text-align: left;
+  width: 100%;
+
+}
+.twentyFourSevenAcess .writedown article{
+  text-align: left;
+  color: rgba(124, 134, 151, 1);
+  font-size: 20px;
+}
+.twentyFourSevenAcess .writedown > div{
+  text-align: center;
+    width: 100%;
+    align-items: end;
+    display: flex;
+    justify-content: start;
+}
+.twentyFourSevenAcess .writedown > div button{
+  border-radius: 100px;
+  background-color: white;
+  text-align: center;
+  font-size: 16px;
+  padding: 12px 40px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+footer{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.17);
+  height: 300px;
+}
+footer > div{
+  width: 100%;
+  height: 100%;
+  border: groove;
+  
+}
+footer .logomockup{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 1em;
+  justify-content: center;
+  padding-left:2em ;
+}
+footer .logomockup > div{
+  width: 112px;
+  height: 36px;
+}
+footer .logomockup > div img{
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+footer .logomockup p{
+  color: white;
+  width: 269px;
+  height: 58px;
+  font-size: 24px;
+  font-weight: 400;
+  color: rgba(124, 134, 151, 1);
+}
+footer .navcon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer .navcon ul{
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: relative;
+}
+footer .navcon ul li{
+  color:  rgba(124, 134, 151, 1);
+  list-style: none;
+  font-size: 24px;
+  cursor: pointer;
+  font-weight: 500;
+}
+footer .navcon ul li:hover{
+  color: #501BE5;
+}
+footer .socialHanldes{
+  display: flex;
+  justify-content: end;
+}
