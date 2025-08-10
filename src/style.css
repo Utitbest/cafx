@@ -10,9 +10,17 @@
 html{
   scroll-behavior: smooth;
 }
+html:hover::-webkit-scrollbar-thumb {
+  background: #222b64;
+  border-radius: 5px;
+}
+html::-webkit-scrollbar {
+  background-color: #090b19;
+  transition: 1s ease-in-out;
+  width: 9px;
+}
 body{
   background: rgb(9, 11, 24);
-  overflow-x: hidden;
 }
 #app{
   width: 100%;
@@ -35,13 +43,13 @@ body{
 }
 #app > .NavContain {
   position: absolute;
-  top: 3.5em; 
+  top: 3em; 
   left: 50%; 
   transform: translateX(-50%); 
-  display: grid;
-  grid-template-columns: 150px 1fr 150px;
+  display: none;
+  grid-template-columns: 150px 1fr;
   width: 800px;
-  height: 50px;
+  height: 60px;
   align-items: center;
   justify-content: space-between;
   border-radius: 100px;
@@ -61,31 +69,40 @@ body{
 #app > .NavContain .SiteLogo img{
   height: 75%;
   width: 75%;
+  cursor: pointer;
   object-fit: contain;
   object-position: center;
 }
-#app > .NavContain ul{
+#app > .NavContain nav ul{
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  flex: 1;
 }
-#app > .NavContain ul li{
+#app > .NavContain > nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+#app > .NavContain > nav ul li{
   list-style: none;
   color: white;
   font-weight: 400;
   font-size: 15px;
   cursor: pointer;
 }
-#app > .NavContain ul li:hover{
+#app > .NavContain > nav ul li:hover{
   color: #6673CC;
 }
-#app > .NavContain > .launchbud{
+#app > .NavContain > nav .launchbud{
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
+  width: 150px;
 }
-#app > .NavContain > .launchbud button{
+#app > .NavContain > nav .launchbud button{
   color: white;
   text-align: center;
   border-radius: 100px;
@@ -153,9 +170,9 @@ body{
 #Features::after{
   content: '';
   position: absolute;
-  width: 50%;
+  width: 30%;
   height: 50%;
-  right: -130px;
+  right: 0;
   top: 38%;
   border: 50%;
   z-index: -7;
@@ -165,29 +182,31 @@ body{
 #Features::before {
   content: '';
  position: absolute;
-  width: 50%;
+  width: 30%;
   height: 100%;
-  left: -140px;
+  left: 0;
   z-index: -7;
   top: 58%;
   background: rgba(80, 27, 229, 0.29);
   filter: blur(228.65px);
 }
-#Features h2{
-  font-size: 48px;
+#Features .feturesh2{
+   font-size: clamp(14px, 6vw, 48px);
   font-weight: 600;
   color: white;
   width: 100%;
   text-align: center;
 }
+
 #Features .featuresContent {
   display: grid;
-  grid-template-columns: repeat(3, auto); 
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 3em;
+  width: 100%;
+  padding: 0 2em;
 }
 
 #Features .featuresContent > div{
-  width: 300px;
   height: 200px;
   display: flex;
   border-radius: 10px;
@@ -200,6 +219,7 @@ body{
   background-blend-mode: lighten;
   background-clip: padding-box;
   align-items: center;
+  justify-content: center;
 }
 .autopilotfloater{
   position: absolute;
@@ -278,7 +298,7 @@ body{
 #Features .trade_with_ease{
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   margin-top:  6em;
 }
 #Features .trade_with_ease > .imgTag{
@@ -304,7 +324,9 @@ body{
 }
 #Features .trade_with_ease > .writedown h2{
   text-align: right;
-  font-size: 48px;
+  font-size: clamp(14px, 6vw, 48px);
+  font-weight: 600;
+  color: white;
 }
 #Features .trade_with_ease > .writedown article{
   text-align: right;
@@ -336,7 +358,7 @@ body{
   margin-top: 8em;
 }
 #How_It_Works h2{
-  font-size: 40px;
+  font-size: clamp(14px, 6vw, 40px);
   font-weight: 600;
   color: white;
   width: 100%;
@@ -345,11 +367,13 @@ body{
 }
 #How_It_Works .samplesContainer{
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 3em;
+  padding: 0 2em;
+  width: 100%;
 }
 #How_It_Works .samplesContainer > div{
-  width: 300px;
+  width: 100%;
   height: 135px;
   display: flex;
   border-radius: 10px;
@@ -362,6 +386,7 @@ body{
   background-blend-mode: lighten;
   background-clip: padding-box;
   align-items: center;
+  justify-content: center;
 }
 
 #How_It_Works .samplesContainer > div > div{
@@ -373,6 +398,7 @@ body{
   padding: 0 2em;
   color: white;
   text-align: center;
+
 }
 #How_It_Works .samplesContainer > div > div h3{
   font-size: 17px;
@@ -395,10 +421,10 @@ body{
 #Pricing::after{
   content: '';
   position: absolute;
-  width: 50%;
-  height: 50%;
-  right: -140px;
-  top: 10%;
+  width: 25%;
+  height: 40%;
+  right: 0;
+  top: 0;
   border: 50%;
   z-index: -7;
   background: rgba(80, 27, 229, 0.29);
@@ -407,17 +433,17 @@ body{
 #Pricing::before {
   content: '';
  position: absolute;
-  width: 40%;
-  height: 50%;
-  left: -140px;
+  width: 20%;
+  height: 40%;
+  left: 0;
   z-index: -7;
-  top: 40%;
+  top: 42%;
   background: rgba(80, 27, 229, 0.29);
   filter: blur(228.65px);
 }
 #Pricing h2{
   color: white;
-  font-size: 48px;
+  font-size: clamp(14px, 6vw, 48px);
   margin-bottom:1.5em;
 }
 #Pricing > div{
@@ -459,21 +485,23 @@ body{
 .priceTag{
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   align-items: center;
   justify-content: space-evenly;
   margin:3em 0 ;
-
+  padding: 0 2em;
+  gap: 4em;
 } 
 .priceTag > .content{
   display: flex;
   align-items: center;
-  justify-content: center;
-  /* width: 350px; */
+  justify-content: space-between;
+  width: 100%;
+  gap: 1em;
 }
 .priceTag > .content > div{
   background: rgba(35, 29, 79, 1);
-  width: 320px;
+  width: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -562,8 +590,8 @@ body{
 }
 #Pricing .twentyFourSevenAcess{
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  margin: 3em 0;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  margin: 12em 0;
 }
 #Pricing .twentyFourSevenAcess .pics{
   display: flex;
@@ -587,7 +615,7 @@ body{
   gap: 3em;
 }
 .twentyFourSevenAcess .writedown h2{
-  font-size: 52px !important;
+  font-size: clamp(14px, 6vw, 52px) ;
   font-weight: 600;
   margin-bottom: 0 !important;
   text-align: left;
@@ -669,7 +697,7 @@ footer .navcon ul{
 footer .navcon ul li{
   color:  rgba(124, 134, 151, 1);
   list-style: none;
-  font-size: 24px;
+  font-size: clamp(14px, 6vw, 24px);
   cursor: pointer;
   font-weight: 500;
 }
@@ -685,7 +713,7 @@ footer .socialHanldes{
   gap: 2.5em;
 }
 footer .socialHanldes P{
-  font-size: 24px;
+  font-size: clamp(14px, 6vw, 24px);
   color: rgba(167, 173, 190, 1);
   font-weight: 500;
 }
@@ -705,3 +733,126 @@ footer .socialHanldes > div svg:hover{
   color:#6673C4;
   transition: .3s linear;
 }
+@media (max-width:1029px) {
+  #Features .trade_with_ease > .writedown{
+    padding-right: 2em;
+  }
+  .twentyFourSevenAcess .writedown{
+    padding-left:2em ;
+  }
+  #Features .trade_with_ease > .writedown h2{
+    text-align: center;
+  }
+  .brown{
+    display: none;
+  }
+  #Features .trade_with_ease > .writedown article{
+    text-align: center;
+  }
+}
+@media (max-width:810px){
+  #Features .trade_with_ease > .writedown{
+    padding: 0 2em;
+  }
+  #Features .trade_with_ease > .writedown > div{
+    justify-content: start;
+  }
+}
+@media (max-width:776px){
+  .priceTag > .content > div{
+    box-shadow: 0 0 4px 0px rgba(82, 67, 194, 0.2958);
+  }
+  footer{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    padding: 2em .7em;
+    gap: 2em;
+  }
+  footer .socialHanldes{
+    padding: 0;
+  }
+  footer .logomockup{
+    padding: 0 1em;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  footer .logomockup p{
+    display: flex;
+    flex: 1;
+    justify-content: end;
+  }
+  footer .navcon ul{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2em;
+  }
+  footer .navcon ul li{
+    white-space: nowrap;
+  }
+}
+@media (max-width:670px){
+  #app > .HomePageWriteUp{
+    padding: 1em;
+    align-items: center;
+  }
+  #app > .HomePageWriteUp > article{
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  #app > .HomePageWriteUp > small{
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  #app > .HomePageWriteUp > .Launch_Share{
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+}
+@media (max-width:650px) {
+  .twentyFourSevenAcess .writedown h2{
+    text-align: center;
+  }
+  .twentyFourSevenAcess .writedown{
+    padding: 0 2em;
+    order: 2;
+    margin: 2em 0;
+  }
+  .twentyFourSevenAcess .writedown article{
+    text-align: center;
+  }
+}
+@media (max-width:600px){
+  #app > .HomePageWriteUp{
+    padding: 1em;
+  }
+  #app > .HomePageWriteUp > article{
+    font-size: 40px;
+  }
+  #app > .HomePageWriteUp > small{
+    font-size: 15px;
+  }
+  #app > .HomePageWriteUp > .Launch_Share > button{
+    padding: 12px 15px;
+    font-size: 13px;
+  }
+}
+@media (max-width:415px){
+   #app > .HomePageWriteUp > article{
+    font-size: 30px;
+  }
+  #app > .HomePageWriteUp > small{
+    font-size: 12px;
+  }
+  #app > .HomePageWriteUp > .Launch_Share > button{
+    padding: 12px 15px;
+    font-size: 13px;
+  }
+}
+
