@@ -12,6 +12,7 @@ html{
 }
 body{
   background: rgb(9, 11, 24);
+  overflow-x: hidden;
 }
 #app{
   width: 100%;
@@ -21,6 +22,16 @@ body{
   background-position: center;
   background-size: cover;
   background-repeat:no-repeat ;
+  position: relative;
+}
+#app::before{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0px 2px 10px 10px #090b19;
+  background-color: #090b19;
 }
 #app > .NavContain {
   position: absolute;
@@ -128,6 +139,7 @@ body{
   background: #FFFFFF38;
   color: white;
 }
+
 #Features{
   width: 100%;
   display: flex;
@@ -135,7 +147,31 @@ body{
   align-items: center;
   margin: 2em 0;
   padding-top: 2em;
-  backdrop-filter: blur(457.29998779296875px)
+  backdrop-filter: blur(457px);
+  position:relative;
+}
+#Features::after{
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  right: -130px;
+  top: 38%;
+  border: 50%;
+  z-index: -7;
+  background: rgba(80, 27, 229, 0.29);
+  filter: blur(228.65px);
+}
+#Features::before {
+  content: '';
+ position: absolute;
+  width: 50%;
+  height: 100%;
+  left: -140px;
+  z-index: -7;
+  top: 58%;
+  background: rgba(80, 27, 229, 0.29);
+  filter: blur(228.65px);
 }
 #Features h2{
   font-size: 48px;
@@ -354,6 +390,30 @@ body{
   width: 100%;
   flex-direction: column;
   margin-top: 7em;
+  position: relative;
+}
+#Pricing::after{
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  right: -140px;
+  top: 10%;
+  border: 50%;
+  z-index: -7;
+  background: rgba(80, 27, 229, 0.29);
+  filter: blur(228.65px);
+}
+#Pricing::before {
+  content: '';
+ position: absolute;
+  width: 40%;
+  height: 50%;
+  left: -140px;
+  z-index: -7;
+  top: 40%;
+  background: rgba(80, 27, 229, 0.29);
+  filter: blur(228.65px);
 }
 #Pricing h2{
   color: white;
@@ -563,13 +623,11 @@ footer{
   align-items: center;
   width: 100%;
   border-top: 1px solid rgba(255, 255, 255, 0.17);
-  height: 300px;
+  height: 500px;
 }
 footer > div{
   width: 100%;
   height: 100%;
-  border: groove;
-  
 }
 footer .logomockup{
   display: flex;
@@ -620,5 +678,30 @@ footer .navcon ul li:hover{
 }
 footer .socialHanldes{
   display: flex;
-  justify-content: end;
+  justify-content: start;
+  flex-direction: column;
+  align-items: start;
+  padding-top: 9em;
+  gap: 2.5em;
+}
+footer .socialHanldes P{
+  font-size: 24px;
+  color: rgba(167, 173, 190, 1);
+  font-weight: 500;
+}
+footer .socialHanldes > div{
+  display: flex;
+  width:100%;
+  align-items: center;
+  justify-content: start;
+  gap: .9em;
+}
+footer .socialHanldes > div svg{
+  cursor: pointer;
+  transition: .3s linear;
+}
+footer .socialHanldes > div svg:hover{
+  transform: scale(1.1);
+  color:#6673C4;
+  transition: .3s linear;
 }
