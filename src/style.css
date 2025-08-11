@@ -10,6 +10,10 @@
 html{
   scroll-behavior: smooth;
 }
+a{
+  text-decoration: none;
+  color:white ;
+}
 html:hover::-webkit-scrollbar-thumb {
   background: #222b64;
   border-radius: 5px;
@@ -21,6 +25,7 @@ html::-webkit-scrollbar {
 }
 body{
   background: rgb(9, 11, 24);
+  /* overflow-x: hidden; */
 }
 #app{
   width: 100%;
@@ -90,9 +95,8 @@ body{
   color: white;
   font-weight: 400;
   font-size: 15px;
-  cursor: pointer;
 }
-#app > .NavContain > nav ul li:hover{
+#app > .NavContain > nav ul li a:hover{
   color: #6673CC;
 }
 #app > .NavContain > nav .launchbud{
@@ -695,13 +699,15 @@ footer .navcon ul{
   position: relative;
 }
 footer .navcon ul li{
+  list-style: none;
+}
+footer .navcon ul li a{
   color:  rgba(124, 134, 151, 1);
   list-style: none;
   font-size: clamp(14px, 6vw, 24px);
-  cursor: pointer;
   font-weight: 500;
 }
-footer .navcon ul li:hover{
+footer .navcon ul li a:hover{
   color: #501BE5;
 }
 footer .socialHanldes{
@@ -771,6 +777,10 @@ footer .socialHanldes > div svg:hover{
   }
   footer .socialHanldes{
     padding: 0;
+    align-items: end;
+  }
+  footer .socialHanldes > div{
+    justify-content: end;
   }
   footer .logomockup{
     padding: 0 1em;
@@ -792,6 +802,22 @@ footer .socialHanldes > div svg:hover{
   }
   footer .navcon ul li{
     white-space: nowrap;
+  }
+}
+@media (max-width:720px){
+  footer .navcon ul{
+    display: flex;
+  }
+  footer .socialHanldes > div{
+    justify-content: center;
+  }
+  footer .socialHanldes P{
+    width: 100%;
+    text-align: center;
+  }
+  footer{
+    gap: 3em;
+    overflow: hidden;
   }
 }
 @media (max-width:670px){
@@ -843,7 +869,33 @@ footer .socialHanldes > div svg:hover{
     font-size: 13px;
   }
 }
-@media (max-width:415px){
+@media (max-width:580px){
+  footer .logomockup p{
+    display: none;
+  }
+  #Pricing .twentyFourSevenAcess{
+    margin: 5em 0;
+  }
+}
+@media (max-width:425px) {
+  #Features .featuresContent{
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    padding: 0 1em;
+    /* overflow: hidden; */
+  }
+  #How_It_Works .samplesContainer{
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    padding: 0 1em;
+    overflow: hidden;
+  }
+  .priceTag{
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    padding: 0 1em;
+    overflow: hidden;
+  }
+}
+
+@media (max-width:417px){
    #app > .HomePageWriteUp > article{
     font-size: 30px;
   }
@@ -853,6 +905,61 @@ footer .socialHanldes > div svg:hover{
   #app > .HomePageWriteUp > .Launch_Share > button{
     padding: 12px 15px;
     font-size: 13px;
+  }
+  #Features .trade_with_ease{
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+    gap: 1em;
+  }
+  .twentyFourSevenAcess .writedown > div button{
+    width: 100%;
+  }
+  #Features .trade_with_ease > .writedown > div button{
+    width: 100%;
+  }
+  #Pricing > div .PlansSwitch button:nth-child(1){
+    padding: 17px 31px;
+    padding-right: 10em;
+    width: 80%;
+  }
+  #Pricing > div .PlansSwitch button:nth-child(2){
+    padding: 17px 31px;
+    width: 50%;
+  }
+  #Pricing > div > .PlansSwitch{
+    padding-right:3em ;
+  }
+}
+@media (max-width:340px){
+  #Pricing .twentyFourSevenAcess{
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  }
+}
+
+@media (max-width:320px){
+  .priceTag > .content > div{
+    height: unset;
+    gap: 20px;
+  }
+  #How_It_Works .samplesContainer > div{
+    height: unset;
+  }
+  #How_It_Works .samplesContainer > div > div{
+    padding: 1.5em;
+  }
+  #Features .featuresContent > div{
+    height: unset;
+  }
+  #Features .featuresContent > div .writeUps{
+    padding: 2em;
+  }
+}
+@media (max-width:300px){
+  #app > .HomePageWriteUp > .Launch_Share{
+    flex-direction: column;
+    gap: 1em;
+  }
+  #app > .HomePageWriteUp > .Launch_Share > button{
+    width: 100%;
   }
 }
 
