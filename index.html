@@ -4,33 +4,41 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./src/style.css">
-    <title>Vite App</title>
+    <link rel="shortcut icon" href="Site-iconpng.png" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+
+    <title>CAFX</title>
   </head>
   <body>
-    <section id="app">
-      <div class="NavContain">
-        <div class="SiteLogo">
-          <img src="./src/assest/SiteLogo.png" alt="">
-        </div>
-
-        <nav>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Features</a></li>
-            <li><a href="#">How It Works</a> </li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-
-          <div class="launchbud">
-            <button>Launch App</button>
+    <header class="">
+        <div class="NavContain">
+          <div class="SiteLogo">
+            <img src="./src/assest/SiteLogo.png" alt="">
           </div>
-        </nav>
 
-        
-      </div>
+          <nav>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Features</a></li>
+              <li><a href="#">How It Works</a> </li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
 
+            <div class="launchbud">
+              <button>Launch App</button>
+            </div>
+          </nav>
 
+          <div class="sidebar">
+            <img src="/src/assest/menu-icon.png" alt="">
+          </div>
+        </div>
+    </header>
+    <section id="app" class="section">
+      
       <div class="HomePageWriteUp">
         <article>Trade like a Degen. <br>Win like a Whale.</article>
 
@@ -44,13 +52,13 @@
       </div>
     </section>
     
-    <section id="Features">
+    <section id="Features" class="section">
       <h2 style="margin-bottom:3em;" class="feturesh2">Features</h2>
 
       <div class="featuresContent">
         <div class="autoPilot">
           <div class="autopilotfloater">
-            <img src="/src/assest/autopilot.png" alt="">
+            <img class="floating" src="/src/assest/autopilot.png" alt="">
           </div>
 
           <div class="writeUps">
@@ -60,7 +68,7 @@
         </div>
         <div class="">
           <div class="wallet">
-            <img src="/src/assest/wallet.png" alt="">
+            <img class="floating" src="/src/assest/wallet.png" alt="">
           </div>
 
           <div class="writeUps">
@@ -70,7 +78,7 @@
         </div>
         <div class="">
           <div class="wronggame">
-            <img src="/src/assest/wronggame.png" alt="">
+            <img class="floating" src="/src/assest/wronggame.png" alt="">
           </div>
 
           <div class="writeUps">
@@ -82,7 +90,7 @@
 
       <div class="trade_with_ease">
         <div class="imgTag">
-          <img src="/src/assest/cloudedcity.png" alt="">
+          <img class="floating" src="/src/assest/cloudedcity.png" alt="">
         </div>
 
         <div class="writedown">
@@ -100,7 +108,7 @@
       </div>
     </section>
 
-    <section id="How_It_Works">
+    <section id="How_It_Works" class="section">
       <h2>How It Works</h2>
 
       <div class="samplesContainer">
@@ -125,7 +133,7 @@
       </div>
     </section>
 
-    <section id="Pricing">
+    <section id="Pricing" class="section">
       <h2>Pricing</h2>
 
       <div class="">
@@ -305,12 +313,12 @@
             </div>
           </div>
         <div class="pics">
-          <img src="./src/assest/karako.png" alt="">
+          <img class="floating" src="./src/assest/karako.png" alt="">
         </div>
       </div>
     </section>
 
-    <footer>
+    <footer class="section">
       <div class="logomockup">
        <div>
          <img src="/src/assest/SiteLogo.png" alt="">
